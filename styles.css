@@ -379,15 +379,16 @@ Sidebar
   transform: scale(1);
 }
 .sidebar-close {
+  position: absolute;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
   color: var(--clr-grey-5);
-  position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
 }
+
 .sidebar-link {
   font-size: 1.5rem;
   text-transform: capitalize;
