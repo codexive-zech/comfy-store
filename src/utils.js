@@ -18,9 +18,7 @@ const getElement = (selection) => {
   //   checking to see if the element does exist in the HTML as class or id
   if (element) return element;
   //   when the element class or id does not exist in the HTML then an error should be thrown
-  throw new Error(
-    `Please check "${selection}" selector, no such element exist`
-  );
+  throw Error(`Please check "${selection}" selector, no such element exist`);
 };
 
 const formatPrice = () => {};
