@@ -15,7 +15,142 @@
   </head>
 
   <body>
-    <h2>about page</h2>
+    <!-- Nav -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <!-- Links -->
+        <div>
+          <!-- small screen links display -->
+          <button class="toggle-nav"><i class="fas fa-bars"></i></button>
+          <!-- big screen links display -->
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="product.html" class="nav-link">product</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Nav Logo -->
+        <img src="./img/comfy-logo-black.svg" class="nav-logo" alt="logo" />
+        <!-- Cart -->
+        <div class="toggle-container">
+          <!-- cart basket -->
+          <div class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <!-- items number count -->
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+    <!-- Enf of Nav -->
+    <!-- Hero section For About Page -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">Home / About</h3>
+      </div>
+    </section>
+    <!-- End of Hero section For About Page -->
+    <!-- sidebar section -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close icon -->
+        <button class="sidebar-close">
+          <i class="fa fa-times"></i>
+        </button>
+        <!-- Links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link"
+              ><i class="fas fa-home fa-fw"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="sidebar-link"
+              ><i class="fas fa-couch fa-fw"></i> Product</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link"
+              ><i class="fas fa-book fa-fw"></i> About</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- End of sidebar section -->
+    <!-- Cart Section -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <!-- Cart Button -->
+        <button class="cart-close">
+          <i class="fa fa-times"></i>
+        </button>
+        <!-- Cart Head Text -->
+        <header class="text-slanted">
+          <h3>Your Bag</h3>
+        </header>
+        <!-- Cart Items -->
+        <div class="cart-items">
+          <!-- Single Cart Item -->
+          <div class="cart-item">
+            <!-- Cart Item Image -->
+            <img
+              src="./img/comfy-main-bcg.jpeg"
+              alt="name"
+              class="cart-item-img"
+            />
+            <!-- Cart Item Info -->
+
+            <div>
+              <h4 class="cart-item-name">High Back Couch</h4>
+              <p class="cart-item-price">$12.99</p>
+              <button class="cart-item-remove-btn">Remove Product</button>
+            </div>
+            <!-- Cart Toggle Buttons -->
+            <div>
+              <button class="cart-item-increase-btn">
+                <i class="fa fa-chevron-up"></i>
+              </button>
+              <p class="cart-item-amount">1</p>
+              <button class="cart-item-decrease-btn">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+          <!-- End Single Cart Item -->
+        </div>
+        <!-- Cart Footer -->
+        <footer>
+          <h3 class="text-slanted cart-total">Total : $12.99</h3>
+          <button class="cart-checkout btn">Checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- End of Cart Section -->
+    <!-- About -->
+    <section class="section section-center about-page">
+      <div class="title">
+        <h2><span>/</span> About</h2>
+      </div>
+      <p class="about-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum eos
+        at, omnis, eligendi natus, deleniti dolor sunt illum totam delectus
+        repellendus quibusdam facere excepturi non eius debitis aliquam! Velit
+        dignissimos illum optio reiciendis perspiciatis tempora pariatur
+        debitis. Numquam at vero consectetur quia laboriosam, aliquid natus
+        tenetur sunt neque perspiciatis asperiores excepturi possimus obcaecati
+        nihil veritatis magnam nulla accusamus perferendis tempora voluptatibus
+        ducimus, quo unde placeat. Voluptatum nulla architecto illum error, qui
+        nobis quos beatae porro quam voluptates sequi pariatur reprehenderit!
+      </p>
+    </section>
+    <!-- End of About -->
     <script type="module" src="./src/pages/about.js"></script>
   </body>
 </html>
