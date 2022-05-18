@@ -23,8 +23,27 @@ const getElement = (selection) => {
 
 const formatPrice = () => {};
 
-const getStorageItem = () => {};
-const setStorageItem = () => {};
+// adding a func that get products already fetched and added to the local storage (value)
+const getStorageItem = (item) => {
+  // getting product array in the local storage (store)
+  let storageItem = localStorage.getItem(item);
+  // checking to see if products fetched are in the local storage
+  if (storageItem) {
+    // converting the string data set in the local storage into a JSON so that the browser can get it and use
+    storageItem = JSON.parse(localStorage.getItem(item));
+  } else {
+    // when the local storage where it is to fetch products name is different then it should have an empty array
+    storageItem = [];
+  }
+  // returning the storage item value
+  return storageItem;
+};
+
+// adding a func that add products fetched from the server into the local storage so that it can be easily accessed (takes a key - value pair)
+const setStorageItem = (name, item) => {
+  // The JSON.stringify() method converts the item (products) into strings when setting products in the local storage
+  localStorage.setItem(name, JSON.stringify(item));
+};
 
 export {
   allProductsUrl,

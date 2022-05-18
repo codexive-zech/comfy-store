@@ -15,8 +15,8 @@ const init = async () => {
   const products = await fetchProducts();
   // checking to see if products in the server where fetched successfully to the browser
   if (products) {
+    // adding products into the store
     setupStore(products);
-    console.log(store);
   }
 };
 
