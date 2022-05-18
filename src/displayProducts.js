@@ -1,3 +1,5 @@
+// importing tne functionality that format price
+import { formatPrice } from "./utils.js";
 // implementing a functionality that display just products which featured value are true
 const displayProducts = (products, element) => {
   const displayFeaturedProducts =
@@ -28,7 +30,7 @@ const displayProducts = (products, element) => {
           <!-- Product Info -->
           <footer>
             <p class="product-name">${name}</p>
-            <h4 class="product-price">$9.99</h4>
+            <h4 class="product-price">${formatPrice(price)}</h4>
           </footer>
         </article>`;
       })

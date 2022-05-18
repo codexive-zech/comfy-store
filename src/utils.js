@@ -21,7 +21,16 @@ const getElement = (selection) => {
   throw Error(`Please check "${selection}" selector, no such element exist`);
 };
 
-const formatPrice = () => {};
+// the format price functionality
+const formatPrice = (price) => {
+  // using the international standard to format the price
+  const formattedPrice = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format((price / 100).toFixed(2));
+  // returning the formatted price for each products
+  return formattedPrice;
+};
 
 // adding a func that get products already fetched and added to the local storage (value)
 const getStorageItem = (item) => {
