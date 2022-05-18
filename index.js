@@ -17,6 +17,9 @@ const init = async () => {
   if (products) {
     // adding products into the store
     setupStore(products);
+    // filtering over the store array from the local storage and getting the products that has the featured of true
+    const featured = store.filter((product) => product.featured === true);
+    console.log(featured);
   }
 };
 
