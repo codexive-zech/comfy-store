@@ -8,5 +8,11 @@ import { store } from "../store.js";
 import displayProducts from "../displayProducts.js";
 import { getElement } from "../utils.js";
 
-// getting and displaying the store array available into the products container (parent element for all product)
+// taking the loading so it will take in effect
+const loading = getElement(".page-loading");
+
+// getting and displaying the store array available in the local storage into the products container (parent element for all product)
 displayProducts(store, getElement(".products-container"));
+
+//hide the visibility of the loading after the products has been gotten from the local storage store array
+loading.style.visibility = "hidden";
