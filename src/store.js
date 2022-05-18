@@ -13,7 +13,7 @@ const setupStore = (products) => {
       id,
       fields: { company, colors, featured, price, name, image: img },
     } = product;
-    const image = img[0].thumbnails.url;
+    const image = img[0].thumbnails.large.url;
     // returning back all the needed properties been destructured
     return { id, company, colors, featured, price, name, image };
   });
