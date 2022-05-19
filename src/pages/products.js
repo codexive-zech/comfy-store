@@ -7,7 +7,9 @@ import "../cart/setupCart.js";
 import { store } from "../store.js";
 import displayProducts from "../displayProducts.js";
 import { getElement } from "../utils.js";
+// filter
 import setupSearch from "../filters/setupSearch.js";
+import setupCompanies from "../filters/setupCompany.js";
 
 // taking the loading so it will take in effect
 const loading = getElement(".page-loading");
@@ -16,5 +18,6 @@ const loading = getElement(".page-loading");
 displayProducts(store, getElement(".products-container"));
 // adding the functionality that displays on searched products from the store array
 setupSearch(store);
+setupCompanies(store);
 //hide the visibility of the loading after the products has been gotten from the local storage store array
 loading.style.visibility = "hidden";
