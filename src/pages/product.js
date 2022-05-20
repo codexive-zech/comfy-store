@@ -4,7 +4,7 @@ import "../cart/toggleCart.js";
 import "../cart/setupCart.js";
 
 // Specific import to display product clicked already available
-import { getElement } from "../utils.js";
+import { getElement, singleProductUrl } from "../utils.js";
 
 const pageHeroTitle = getElement(".page-hero-title");
 const singleProductCenter = getElement(".single-product-center");
@@ -17,6 +17,13 @@ const singleProductDesc = getElement(".single-product-desc");
 const addToCart = getElement(".addToCart");
 const pageLoading = getElement(".page-loading");
 
-window.addEventListener("DOMContentLoaded", () => {
-  pageLoading.classList.remove("page-loading");
+// adding and listening for a load page event
+window.addEventListener("DOMContentLoaded", async () => {
+  // removed the visibility completely for the page loading element
+  pageLoading.style.visibility = "hidden";
+  //   getting the specific id of the url clicked
+  const urlID = window.location.search;
+  //   fetching products information concerning a single product via it id along side
+  const response = await fetch(`${singleProductUrl}${urlID}`);
+  console.log(response);
 });
