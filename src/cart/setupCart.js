@@ -3,5 +3,5 @@ import { openCart } from "./toggleCart.js";
 export const addToCart = (id) => {
   console.log(id);
   //   adding the open cart functionality so as to show the cart and it's item when the button is clicked clicked
-  //   openCart();
+  openCart();
 };
