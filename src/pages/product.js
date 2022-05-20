@@ -23,7 +23,23 @@ window.addEventListener("DOMContentLoaded", async () => {
   pageLoading.style.visibility = "hidden";
   //   getting the specific id of the url clicked
   const urlID = window.location.search;
-  //   fetching products information concerning a single product via it id along side
-  const response = await fetch(`${singleProductUrl}${urlID}`);
-  console.log(response);
+  //   a try and catch block to get both no product available error and network error
+  try {
+    //   fetching details regarding the specific product clicked via the url id
+    const response = await fetch(`${singleProductUrl}${urlID}`);
+    // checking to see the status of the returned promise if it's between 200 and 299 convert data to json son browser can use
+    if (response.status >= 200 && response.status <= 299) {
+      // converting the return response from the server into a json so the browser can use
+      const data = await response.json();
+      console.log(data);
+    } else {
+      //  dynamically display this error message when the id url does no matches any id from the returned (promise) data in the server
+      singleProductCenter.innerHTML = `<div>
+        <h3 class="error">sorry, something went wrong</h3><a class="btn" href="index.html">Back Home</a>
+        </div>`;
+    }
+  } catch (error) {
+    //   give this error when above is not valid
+    console.log(error);
+  }
 });
