@@ -6,6 +6,8 @@ import "../cart/setupCart.js";
 // Specific import to display product clicked already available
 import { getElement, singleProductUrl, formatPrice } from "../utils.js";
 import { openCart } from "../cart/toggleCart.js";
+// import { findProduct } from "../store.js";
+import addCartToDOM from "../cart/addCartToDOM.js";
 
 const pageHeroTitle = getElement(".page-hero-title");
 const singleProductCenter = getElement(".single-product-center");

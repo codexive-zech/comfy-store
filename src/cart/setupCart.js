@@ -21,7 +21,7 @@ export const addToCart = (id) => {
     // find each product id available
     let product = findProduct(id);
     // adding items that are not there to the cart and give initial value of 1
-    product = { ...product, amount: id };
+    product = { ...product, amount: 1 };
     // get all the product item available in the cart and also the newly added product in the cart
     cart = [...cart, product];
     // add product item dynamically
