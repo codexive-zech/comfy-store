@@ -20,7 +20,12 @@ const setupStore = (products) => {
   // setting the store array been fetched from the server into the local storage so that we don't implement fetch product func when we need the products in another web page
   setStorageItem("store", store);
 };
-console.log(store);
 
-// {Objects} exporting the empty store array and store with products via setup store
-export { store, setupStore };
+// a functionality that finds products in the store array
+const findProduct = (id) => {
+  // checking to find out if the product clicked id's the same as the id of a random product in the store local storage array
+  let product = store.find((product) => product.id === id);
+  // the product with such id should return as long as the product clicked and a product in the store array has same id
+  return product;
+};
+export { store, setupStore, findProduct };
